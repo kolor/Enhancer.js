@@ -1,0 +1,171 @@
+
+@font-face {font-family: 'Aller'; src: url('fonts/aller.eot'); src: local('©'), url('fonts/aller.ttf') format('truetype');}
+
+.clr {overflow: hidden; _width: 100%;}
+.clear {clear: both; width: 0; height: 0;}
+.hide {display: none;}
+.lt {float: left; _display: inline;}
+.rt {float: right; _display: inline;}
+
+body {color: #333; font-family: 'trebuchet MS'; font-size: 13px;}
+button {background-image: -moz-linear-gradient(center top, #CDDDFF, #5681FE); background-image: -webkit-gradient(linear, left top, left bottom, from(#CDDDFF), to(#5681FE)); border:1px solid #396BA7; color:#143781; cursor:pointer; padding:2px 4px; text-shadow:0 1px 0 #CCCCCC;}
+button:hover {background-image: -moz-linear-gradient(center top, #81A9FF, #638AFC); background-image: -webkit-gradient(linear, left top, left bottom, from(#81A9FF), to(#638AFC)); color: #fff; text-shadow: 0 1px 0 #555;}
+ 
+button:focus, button:active{outline: 0 none;}
+button::-moz-focus-inner {border: 0; padding: 0;} 
+
+a:active, a:focus {border: none; outline: 0 none;}
+.wrap {background: #d1d1d1; border: 2px solid #8a8a8a; width: 750px; margin: 10px auto 40px; position: relative; min-height: 500px;}
+
+#side {width: 150px; float: left;}
+#side .title {background: url(img/logo.png) no-repeat; width: 140px; height: 22px; margin: 10px;}
+
+#side .menu {margin-top: 10px;}
+#side .menu div {height:63px; margin:15px auto; width:70px; cursor: pointer;}
+
+#side .text {background: url(img/btn-text.png) no-repeat;}
+#side .text.active {background: url(img/btn-text-over.png) no-repeat;}
+#side .brush {background: url(img/btn-brush.png) no-repeat;}
+#side .brush.active {background: url(img/btn-brush-over.png) no-repeat;}
+#side .trans {background: url(img/btn-trans.png) no-repeat;}
+#side .colors {background: url(img/btn-colors.png) no-repeat;}
+#side .colors.active {background: url(img/btn-colors-over.png) no-repeat;}
+#side .effects {background: url(img/btn-eye.png) no-repeat;}
+#side .effects.active {background: url(img/btn-eye-over.png) no-repeat;}
+#side .advanced {background: url(img/btn-bulb.png) no-repeat;}
+#side .advanced.active {background: url(img/btn-bulb-over.png) no-repeat;}
+#side .save {background: url(img/btn-save.png) no-repeat;}
+#side .save.active {background: url(img/btn-save-over.png) no-repeat;}
+
+#main {float: right; width: 580px; padding: 10px;}
+
+#main .props {background: #fafafa; border: 1px solid #777; padding: 7px; margin: 10px;}
+#main .props table {width: 100%;}
+#main .props td {padding: 5px;}
+#main .props td.caption {font-weight: bold; vertical-align:middle;}
+
+
+/*** common styles ***/
+.props .apply, .props .undo {margin: 4px 6px;}
+
+/*** text tools ***/
+
+.props .text {overflow: hidden;}
+.props .text > div {float: left; height: 65px;}
+.props .text .left {border-right:1px solid #ccc; padding-right:10px;}
+.props .text .left .fontfamily {width: 150px; padding: 3px; margin-bottom: 10px;}
+.props .text .left .fontsize {width:45px; padding: 2px; margin-right: 10px;}
+.props .text .left span {background: #FCFCFC; border:1px solid #aaa; font-size:13px; font-weight:bold; padding:1px 8px; margin: 0 3px; cursor: pointer;}
+.props .text .left span[rel='italic'] {font-style: italic;}
+.props .text .left span[reln='underline'] {text-decoration:underline;}
+.props .text .left span:hover {background: #DDFFF9;}
+.props .text .left span.active, .props .text .left span.active:hover {background: #FFF7B0;}
+
+.props .text .center {border-left: 1px solid #fff; padding: 0 10px; border-right: 1px solid #ccc;}
+.props .text .center .colorwheel {border: 1px solid #333333; height:40px; margin-bottom:5px; width:45px; background: #000000; cursor: pointer;}
+.props .text .center em {padding: 6px;}
+
+.props .text .right {border-left: 1px solid #fff; padding-left: 10px;}
+.props .text .right input {padding:4px; width:285px;}
+
+
+/*** brush tools ***/
+
+.props .draw {overflow: hidden;}
+.props .draw > div {float: left; height: 70px;}
+.props .draw .left {border-right:1px solid #ccc; padding-right:10px; width: 170px;}
+.props .draw .left .tool[rel='brush'] {background: url(img/tools.png) no-repeat 0 0;}
+.props .draw .left .tool[rel='line'] {background: url(img/tools.png) no-repeat -30px 0;}
+.props .draw .left .tool[rel='rectangle'] {background: url(img/tools.png) no-repeat -64px 0;}
+.props .draw .left .tool[rel='ellipse'] {background: url(img/tools.png) no-repeat -100px 0;}
+.props .draw .left .tool[rel='spirograph'] {background: url(img/tools.png) no-repeat -134px 0;}
+.props .draw .left .tool {background-color: #f5f5f5; border:1px solid #aaa; height: 30px; width: 30px; margin: 0 5px 5px; cursor: pointer; float: left;}
+.props .draw .left .tool:hover {background-color: #DDFFF9;}
+.props .draw .left .tool.active, .props .draw .left .tool.active:hover {background-color: #FFF7B0 !important;}
+
+.props .draw .center {border-left: 1px solid #fff; padding: 0 6px 0 15px; border-right: 1px solid #ccc; width: 110px;}
+.props .draw .center .colorwheel {border: 1px solid #333333; height:42px; margin-bottom:10px; width:42px; background: #000000; cursor: pointer; float: left;}
+.props .draw .center .colorwheel2 {border: 1px solid #333333; height:42px; margin-bottom:10px; width:42px; background: #ffffff; cursor: pointer; float: left; margin-left: 10px;}
+.props .draw .center .em1 {margin-left: 2px; font-size: 11px;}
+.props .draw .center .em2 {margin-left: 20px; font-size: 11px;}
+
+.props .draw .center2 {border-left: 1px solid #fff; padding-left: 15px; border-right: 1px solid #ccc; width: 110px;}
+.props .draw .center2 .linewidth[rel='1'] {width: 7px; background: url(img/widths.png) no-repeat 1px 0;}
+.props .draw .center2 .linewidth[rel='3'] {width: 11px; background: url(img/widths.png) no-repeat -3px 0;}
+.props .draw .center2 .linewidth[rel='5'] {width: 14px; background: url(img/widths.png) no-repeat -10px 0;}
+.props .draw .center2 .linewidth[rel='7'] {width: 16px; background: url(img/widths.png) no-repeat -21px 0;}
+.props .draw .center2 .linewidth[rel='9'] {width: 18px; background: url(img/widths.png) no-repeat -33px 0;}
+.props .draw .center2 .linewidth {background-color: #f5f5f5; border:1px solid #dcdcdc; cursor:pointer; float:left; height:68px; margin-right:4px;}
+.props .draw .center2 .linewidth:hover {background-color: #DDFFF9;}
+.props .draw .center2 .linewidth.active, .props .draw .center2 .linewidth.active:hover {background-color: #FFF7B0 !important;}
+
+.props .draw .right {border-left: 1px solid #fff; padding-left: 10px;}
+.props .draw .right .fill {background-color: #f5f5f5; border:1px solid #ddd; border-bottom: none; cursor:pointer; width: 50px; height: 16px; padding: 3px 4px;}
+.props .draw .right .fill[rel="stroke"] {background: url(img/fills.png) no-repeat 2px center;}
+.props .draw .right .fill[rel="fill"] {background: url(img/fills.png) no-repeat -61px center;}
+.props .draw .right .fill[rel="paint"] {background: url(img/fills.png) no-repeat -118px center; border-bottom: 1px solid #ddd;}
+.props .draw .right .fill:hover {background-color: #DDFFF9;}
+.props .draw .right .fill.active, .props .draw .rigth .fill.active:hover {background-color: #FFF7B0 !important;}
+
+/** color adjustments ***/
+
+.props .colors {overflow: hidden;}
+.props .colors > div {float: left; height: 110px;}
+.props .colors .left {border-right:1px solid #ccc; padding-right:6px; width: 126px;}
+.props .colors .left .tool {background-color: #f5f5f5; border:1px solid #aaa; height: 30px; width: 30px; margin: 0 5px 5px; cursor: pointer; float: left;}
+.props .colors .left .tool[rel="bcg"] {background: url(img/colors.png) no-repeat 1px 0;}
+.props .colors .left .tool[rel="rgb"] {background: url(img/colors.png) no-repeat -207px 0;}
+.props .colors .left .tool[rel="hsl"] {background: url(img/colors.png) no-repeat -30px 0;}
+.props .colors .left .tool[rel="colorize"] {background: url(img/colors.png) no-repeat -62px 0;}
+.props .colors .left .tool[rel="solarize"] {background: url(img/colors.png) no-repeat -152px 0;}
+.props .colors .left .tool[rel="invert"] {background: url(img/colors.png) no-repeat -180px 0;}
+.props .colors .left .tool[rel="desaturate"] {background: url(img/colors.png) no-repeat -93px 0;}
+.props .colors .left .tool[rel="sepia"] {background: url(img/colors.png) no-repeat -124px 0;}
+.props .colors .left .tool:hover {background-color: #DDFFF9;}
+.props .colors .left .tool.active, .props .colors .left .tool.active:hover {background-color: #FFF7B0 !important;}
+
+.props .colors .slider, .props .colors .slider2 {top:1px; width:115px; float: left;}
+.props .colors span.value {margin-left: 12px;}
+.props .colors .colorwheel {background: #000000; border: 1px solid #333333; cursor: pointer; height: 17px; width: 100px;}
+.props .colors .right {width: 245px; border-left: 1px solid #fff; border-right:1px solid #ccc;  padding: 0 2px;}
+.props .colors .right .info {font-size: 14px; line-height: 110px;  text-align: center; text-shadow: 0 1px 0 #fff;}
+
+.props .colors #preview {border-left: 1px solid #fff; padding-left: 7px;}
+
+/*** effects ***/
+
+.props .effects {overflow: hidden;}
+.props .effects > div {float: left; height: 115px;}
+.props .effects .left {border-right:1px solid #ccc; padding-right:6px; width: 126px;}
+.props .effects .left .tool {background-color: #f5f5f5; border:1px solid #aaa; height: 30px; width: 30px; margin: 0 5px 5px; cursor: pointer; float: left;}
+
+.props .effects .left .tool[rel="glow"] {background: url(img/effects.png) no-repeat 1px 0;}
+.props .effects .left .tool[rel="pointilize"] {background: url(img/effects.png) no-repeat -29px 0;}
+.props .effects .left .tool[rel="posterize"] {background: url(img/effects.png) no-repeat -58px 0;}
+.props .effects .left .tool[rel="noise"] {background: url(img/effects.png) no-repeat -87px 0;}
+.props .effects .left .tool[rel="blur"] {background: url(img/effects.png) no-repeat -117px 0;}
+.props .effects .left .tool[rel="emboss"] {background: url(img/effects.png) no-repeat -147px 0;}
+.props .effects .left .tool[rel="mosaic"] {background: url(img/effects.png) no-repeat -177px 0;}
+.props .effects .left .tool:hover {background-color: #DDFFF9;}
+.props .effects .left .tool.active, .props .colors .left .tool.active:hover {background-color: #FFF7B0 !important;}
+
+.props .effects .slider, .props .effects .slider2 {top:1px; width:115px; float: left;}
+.props .effects span.value {margin-left: 12px;}
+
+.props .effects .right {width: 245px; border-right:1px solid #ccc; border-left: 1px solid #fff; padding-left: 5px;}
+.props .effects .right .info {font-size: 14px;  line-height: 110px;  text-align: center; text-shadow: 0 1px 0 #fff;}
+
+.props .effects #preview {border-left: 1px solid #fff; padding-left: 7px;}
+
+
+/** main area ***/
+
+#main #image {background: #eee; border: 1px solid #777; margin: 10px; padding: 10px; position: relative;}
+#main #image.loaded {background: url(img/transp.png) repeat !important;}
+
+#main #image #loader {background: rgba(255,255,255,0.6); color: #828282; height: 100%; margin-left: -10px; margin-top: -10px; position: absolute; width: 100%; display: none;}
+#main #image #loader .info {font-size: 40px; color: #555; position: absolute; text-align: center; text-shadow: 0 1px 2px #262629; top: 45%; width: 100%; }
+#main #image.highlighted {border: 2px solid #CFBC18;}
+#main #image .file-loader {height: 400px; text-align: center; line-height: 400px; font-size: 34px; color: #aaa; text-shadow:0 1px 1px #FFFFFF;}
+
+#main canvas {margin: auto;}
